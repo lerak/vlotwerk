@@ -1,0 +1,224 @@
+---
+// About section - Mexico advantage and trust building
+---
+
+<section class="about" id="over">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image">
+        <div class="image-frame">
+          <img src="/karel.png" alt="Karel - Vlotwerk" class="about-photo" />
+        </div>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-number">15+</span>
+            <span class="stat-text">Jaar ervaring</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">50+</span>
+            <span class="stat-text">Projecten</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <span class="section-label">Over mij</span>
+        <h2>Nederlandse developer, Mexicaanse prijzen</h2>
+        <p class="about-lead">
+          Ik ben Karel — Nederlands, 15+ jaar ervaring in webdevelopment, 
+          en al 10 jaar woonachtig in Mexico.
+        </p>
+        <p>
+          Waarom dat uitmaakt? Mijn kosten van levensonderhoud zijn een fractie 
+          van wat ze in Nederland zouden zijn. Daardoor kan ik <strong>Nederlandse 
+          kwaliteit leveren voor prijzen waar een gemiddeld bureau niet aan kan tippen</strong>.
+        </p>
+        <p>
+          Geen team van juniors die aan je project werken. Geen account managers 
+          die tussenpersoon spelen. Gewoon ik — rechtstreeks contact, snelle lijnen, 
+          en 15 jaar ervaring in elk project.
+        </p>
+
+        <div class="about-benefits">
+          <div class="benefit">
+            <div class="benefit-icon">🇳🇱</div>
+            <div class="benefit-text">
+              <strong>100% Nederlands</strong>
+              <span>Geen taalbarrière, geen miscommunicatie</span>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-icon">💰</div>
+            <div class="benefit-text">
+              <strong>Tot 70% goedkoper</strong>
+              <span>Zelfde kwaliteit, lagere kosten</span>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-icon">⚡</div>
+            <div class="benefit-text">
+              <strong>Direct contact</strong>
+              <span>Geen bureaucratie, snelle oplevering</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-primary">
+          Vraag vrijblijvend een offerte aan
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    background: var(--color-canvas-alt);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(ellipse at top right, rgba(255, 107, 74, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .about-grid {
+    display: grid;
+    gap: var(--space-2xl);
+    align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    .about-grid {
+      grid-template-columns: 1fr 1.3fr;
+    }
+  }
+
+  .about-image {
+    position: relative;
+  }
+
+  .image-frame {
+    position: relative;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .about-photo {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .about-stats {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    margin-top: var(--space-lg);
+  }
+
+  .stat {
+    text-align: center;
+    padding: var(--space-md) var(--space-lg);
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .stat-number {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    line-height: 1;
+  }
+
+  .stat-text {
+    font-size: 0.875rem;
+    color: var(--color-ink-muted);
+  }
+
+  .about-content {
+    position: relative;
+  }
+
+  .section-label {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-sm);
+  }
+
+  .about-content h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .about-lead {
+    font-size: 1.25rem;
+    color: var(--color-ink);
+    font-weight: 500;
+    margin-bottom: var(--space-md);
+  }
+
+  .about-content p {
+    color: var(--color-ink-muted);
+    margin-bottom: var(--space-sm);
+  }
+
+  .about-content strong {
+    color: var(--color-ink);
+  }
+
+  .about-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin: var(--space-xl) 0;
+    padding: var(--space-lg);
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .benefit {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .benefit-icon {
+    font-size: 1.75rem;
+    flex-shrink: 0;
+  }
+
+  .benefit-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .benefit-text strong {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-ink);
+  }
+
+  .benefit-text span {
+    font-size: 0.875rem;
+    color: var(--color-ink-muted);
+  }
+</style>

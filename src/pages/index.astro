@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Portfolio from '../components/Portfolio.astro';
+import Pricing from '../components/Pricing.astro';
+import About from '../components/About.astro';
+import FAQ from '../components/FAQ.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Vlotwerk | Professionele Website vanaf €150 | Nederlandse Developer">
+  <Header />
+  <main>
+    <Hero />
+    <Portfolio />
+    <Pricing />
+    <About />
+    <FAQ />
+    <Contact />
+  </main>
+  <Footer />
+</Layout>
+
+<style is:global>
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+  }
+
+  /* Page load animations */
+  main > section {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+  }
+
+  main > section:nth-child(1) { animation-delay: 0s; }
+  main > section:nth-child(2) { animation-delay: 0.1s; }
+  main > section:nth-child(3) { animation-delay: 0.15s; }
+  main > section:nth-child(4) { animation-delay: 0.2s; }
+  main > section:nth-child(5) { animation-delay: 0.25s; }
+  main > section:nth-child(6) { animation-delay: 0.3s; }
+</style>

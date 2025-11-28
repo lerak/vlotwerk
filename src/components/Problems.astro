@@ -1,0 +1,203 @@
+---
+// Problems section - Addressing pain points of ZZP'ers and small businesses
+---
+
+<section class="problems" id="problemen">
+  <div class="container">
+    <div class="problems-header">
+      <span class="section-label">Herkenbaar?</span>
+      <h2>Je hebt wel wat beters te doen dan je druk te maken over techniek</h2>
+      <p class="problems-intro">
+        Als ZZP'er of ondernemer heb je al genoeg aan je hoofd. 
+        Technische problemen kosten je tijd, klanten en omzet.
+      </p>
+    </div>
+
+    <div class="problems-grid">
+      <div class="problem-card">
+        <div class="problem-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+        </div>
+        <h3>Geen professionele online aanwezigheid</h3>
+        <p>
+          Je weet dat je een goede website nodig hebt, maar je hebt geen idee 
+          waar je moet beginnen. Of je huidige site ziet er niet uit en kost 
+          je klanten.
+        </p>
+      </div>
+
+      <div class="problem-card">
+        <div class="problem-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <h3>Te veel tijd kwijt aan repetitief werk</h3>
+        <p>
+          Facturen maken, e-mails beantwoorden, afspraken plannen... 
+          Je bent meer bezig met administratie dan met je eigenlijke werk.
+        </p>
+      </div>
+
+      <div class="problem-card">
+        <div class="problem-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3>Moeilijk vindbaar voor nieuwe klanten</h3>
+        <p>
+          Potentiële klanten vinden je niet online. Je concurrent wel. 
+          Je weet dat je omzet misloopt, maar weet niet hoe je dit oplost.
+        </p>
+      </div>
+
+      <div class="problem-card">
+        <div class="problem-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <h3>Tools die niet met elkaar praten</h3>
+        <p>
+          Je gebruikt 10 verschillende tools die niet samenwerken. 
+          Informatie moet je handmatig overtypen en je verliest overzicht.
+        </p>
+      </div>
+    </div>
+
+    <div class="problems-cta">
+      <p>Herken je dit? Dan ben je hier aan het juiste adres.</p>
+      <a href="#contact" class="btn btn-accent btn-large">
+        Vertel me over jouw situatie
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .problems {
+    background: var(--color-accent);
+    color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .problems::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+  }
+
+  .problems-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto var(--space-2xl);
+  }
+
+  .section-label {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary-light);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-sm);
+  }
+
+  .problems-header h2 {
+    color: var(--color-white);
+    margin-bottom: var(--space-md);
+  }
+
+  .problems-intro {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 55ch;
+    margin: 0 auto;
+  }
+
+  .problems-grid {
+    display: grid;
+    gap: var(--space-md);
+    margin-bottom: var(--space-2xl);
+  }
+
+  @media (min-width: 768px) {
+    .problems-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-lg);
+    }
+  }
+
+  .problem-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    transition: all var(--transition-base);
+  }
+
+  .problem-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.12);
+    transform: translateY(-4px);
+  }
+
+  .problem-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: rgba(255, 107, 74, 0.15);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+  }
+
+  .problem-icon svg {
+    color: var(--color-primary);
+  }
+
+  .problem-card h3 {
+    color: var(--color-white);
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .problem-card p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .problems-cta {
+    text-align: center;
+  }
+
+  .problems-cta p {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-white);
+    margin: 0 auto var(--space-md);
+  }
+</style>

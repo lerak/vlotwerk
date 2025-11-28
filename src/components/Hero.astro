@@ -1,0 +1,376 @@
+---
+// Hero section - Main conversion area
+---
+
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-gradient"></div>
+    <div class="hero-pattern"></div>
+  </div>
+  
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge animate-fade-in">
+        <span class="badge-dot"></span>
+        <span>15+ jaar ervaring · 50+ projecten</span>
+      </div>
+      
+      <h1 class="hero-title animate-fade-in-up">
+        Nederlandse kwaliteit.<br/>
+        <span class="gradient-text">Scherpe prijzen.</span>
+      </h1>
+      
+      <p class="hero-subtitle animate-fade-in-up delay-200">
+        Professionele website vanaf <strong>€150</strong>. Geen dure bureaus, 
+        geen gedoe — gewoon een ervaren Nederlandse developer die levert wat je nodig hebt.
+      </p>
+      
+      <div class="hero-cta animate-fade-in-up delay-300">
+        <a href="#contact" class="btn btn-primary btn-large">
+          Vraag Gratis Offerte Aan
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="#portfolio" class="btn btn-secondary">
+          Bekijk Mijn Werk
+        </a>
+      </div>
+      
+      <div class="hero-trust animate-fade-in delay-500">
+        <div class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          <span>Websites vanaf €150</span>
+        </div>
+        <div class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          <span>Binnen 2 weken online</span>
+        </div>
+        <div class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          <span>Geen verborgen kosten</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-visual animate-fade-in delay-200">
+      <div class="hero-card hero-card-main">
+        <div class="card-header">
+          <div class="card-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="card-title">jouw-bedrijf.nl</span>
+        </div>
+        <div class="card-preview">
+          <div class="preview-nav"></div>
+          <div class="preview-hero">
+            <div class="preview-text-lg"></div>
+            <div class="preview-text-sm"></div>
+            <div class="preview-btn"></div>
+          </div>
+          <div class="preview-grid">
+            <div class="preview-card"></div>
+            <div class="preview-card"></div>
+            <div class="preview-card"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-card hero-card-float hero-card-stats">
+        <div class="stat-icon">📈</div>
+        <div class="stat-content">
+          <span class="stat-value">+147%</span>
+          <span class="stat-label">Meer bezoekers</span>
+        </div>
+      </div>
+      
+      <div class="hero-card hero-card-float hero-card-time">
+        <div class="stat-icon">⏱️</div>
+        <div class="stat-content">
+          <span class="stat-value">10 uur</span>
+          <span class="stat-label">Bespaard per week</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 120px;
+    padding-bottom: var(--space-2xl);
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+  .hero-gradient {
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 80%;
+    height: 150%;
+    background: radial-gradient(ellipse at center, rgba(255, 107, 74, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(rgba(39, 39, 42, 0.06) 1px, transparent 1px);
+    background-size: 32px 32px;
+    opacity: 0.5;
+  }
+
+  .hero .container {
+    display: grid;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    .hero .container {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2xl);
+    }
+  }
+
+  .hero-content {
+    max-width: 600px;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 107, 74, 0.1);
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-md);
+  }
+
+  .badge-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  .hero-badge span:last-child {
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  .hero-title {
+    margin-bottom: var(--space-md);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-ink-muted);
+    margin-bottom: var(--space-lg);
+    max-width: 50ch;
+  }
+
+  .hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+  }
+
+  .hero-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9375rem;
+    color: var(--color-ink-muted);
+  }
+
+  .trust-item svg {
+    color: var(--color-success);
+    flex-shrink: 0;
+  }
+
+  /* Hero Visual */
+  .hero-visual {
+    position: relative;
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-visual {
+      display: block;
+    }
+  }
+
+  .hero-card {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+  }
+
+  .hero-card-main {
+    position: relative;
+    z-index: 1;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: 0.75rem var(--space-sm);
+    background: var(--color-canvas-alt);
+    border-bottom: 1px solid rgba(10, 22, 40, 0.05);
+  }
+
+  .card-dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .card-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(10, 22, 40, 0.15);
+  }
+
+  .card-dots span:first-child { background: #ff5f57; }
+  .card-dots span:nth-child(2) { background: #febc2e; }
+  .card-dots span:last-child { background: #28c840; }
+
+  .card-title {
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    color: var(--color-ink-muted);
+  }
+
+  .card-preview {
+    padding: var(--space-md);
+  }
+
+  .preview-nav {
+    height: 12px;
+    width: 60%;
+    background: var(--color-canvas-alt);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-md);
+  }
+
+  .preview-hero {
+    padding: var(--space-md) 0;
+    text-align: center;
+  }
+
+  .preview-text-lg {
+    height: 20px;
+    width: 80%;
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    border-radius: var(--radius-sm);
+    margin: 0 auto var(--space-xs);
+  }
+
+  .preview-text-sm {
+    height: 10px;
+    width: 60%;
+    background: var(--color-canvas-alt);
+    border-radius: var(--radius-sm);
+    margin: 0 auto var(--space-sm);
+  }
+
+  .preview-btn {
+    height: 24px;
+    width: 80px;
+    background: var(--color-accent);
+    border-radius: var(--radius-full);
+    margin: 0 auto;
+  }
+
+  .preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xs);
+    margin-top: var(--space-md);
+  }
+
+  .preview-card {
+    height: 60px;
+    background: var(--color-canvas-alt);
+    border-radius: var(--radius-sm);
+  }
+
+  /* Floating cards */
+  .hero-card-float {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .hero-card-stats {
+    top: 10%;
+    right: -10%;
+    animation-delay: 0s;
+  }
+
+  .hero-card-time {
+    bottom: 15%;
+    left: -5%;
+    animation-delay: 2s;
+  }
+
+  .stat-icon {
+    font-size: 1.5rem;
+  }
+
+  .stat-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat-value {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1.2;
+  }
+
+  .stat-label {
+    font-size: 0.8125rem;
+    color: var(--color-ink-muted);
+  }
+</style>

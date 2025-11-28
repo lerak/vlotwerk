@@ -1,0 +1,173 @@
+---
+// Footer component
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">
+          <img src="/logo.png" alt="Vlotwerk - Uw Digitale Partner" class="logo-img" />
+        </a>
+        <p>
+          Professionele websites vanaf €150. Nederlandse kwaliteit, scherpe prijzen.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Snel naar</h4>
+        <ul>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#prijzen">Prijzen</a></li>
+          <li><a href="#over">Over mij</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-services">
+        <h4>Pakketten</h4>
+        <ul>
+          <li><a href="#prijzen">Starter - €150</a></li>
+          <li><a href="#prijzen">Professional - €450</a></li>
+          <li><a href="#prijzen">Business - vanaf €950</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <ul>
+          <li>
+            <a href="mailto:hallo@vlotwerk.site">hallo@vlotwerk.site</a>
+          </li>
+          <li>
+            <a href="https://wa.me/521234567890" target="_blank" rel="noopener">WhatsApp</a>
+          </li>
+          <li>
+            <span>KVK: 12345678</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {currentYear} Vlotwerk. Alle rechten voorbehouden.</p>
+      <div class="footer-legal">
+        <a href="#">Privacybeleid</a>
+        <a href="#">Algemene voorwaarden</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--color-ink);
+    color: var(--color-white);
+    padding: var(--space-2xl) 0 var(--space-lg);
+  }
+
+  .footer-grid {
+    display: grid;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+  }
+
+  @media (min-width: 768px) {
+    .footer-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .footer-grid {
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    }
+  }
+
+  .footer-brand .logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: var(--space-md);
+  }
+
+  .footer-brand .logo-img {
+    height: 44px;
+    width: auto;
+    filter: brightness(0) invert(1);
+  }
+
+  .footer-brand p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9375rem;
+    max-width: 300px;
+  }
+
+  .footer h4 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: var(--space-md);
+  }
+
+  .footer ul {
+    list-style: none;
+  }
+
+  .footer ul li {
+    margin-bottom: var(--space-xs);
+  }
+
+  .footer ul a,
+  .footer ul span {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9375rem;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+
+  .footer ul a:hover {
+    color: var(--color-primary);
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    padding-top: var(--space-lg);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  @media (min-width: 768px) {
+    .footer-bottom {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .footer-bottom p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  .footer-legal {
+    display: flex;
+    gap: var(--space-md);
+  }
+
+  .footer-legal a {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+
+  .footer-legal a:hover {
+    color: var(--color-primary-light);
+  }
+</style>

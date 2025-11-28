@@ -1,0 +1,330 @@
+/* Karel Web Services - Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700&family=Syne:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Color palette - Friendly & Modern */
+  --color-ink: #18181b;
+  --color-ink-light: #3f3f46;
+  --color-ink-muted: #71717a;
+  --color-canvas: #fafafa;
+  --color-canvas-alt: #f4f4f5;
+  --color-primary: #FF6B4A;
+  --color-primary-dark: #E84E2A;
+  --color-primary-light: #FF9E88;
+  --color-accent: #27272a;
+  --color-accent-light: #52525b;
+  --color-white: #ffffff;
+  --color-success: #059669;
+  --color-error: #dc2626;
+
+  /* Typography */
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 10rem;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  /* Borders */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(10, 22, 40, 0.05);
+  --shadow-md: 0 4px 12px rgba(10, 22, 40, 0.08);
+  --shadow-lg: 0 12px 32px rgba(10, 22, 40, 0.12);
+  --shadow-xl: 0 24px 48px rgba(10, 22, 40, 0.16);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-ink);
+  background-color: var(--color-canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-ink);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: -0.01em;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  max-width: 65ch;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--space-lg);
+  }
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: 1rem 2rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-ink);
+  border: 2px solid var(--color-ink);
+}
+
+.btn-secondary:hover {
+  background: var(--color-ink);
+  color: var(--color-white);
+}
+
+.btn-accent {
+  background: var(--color-accent);
+  color: var(--color-ink);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-accent:hover {
+  background: var(--color-accent-light);
+  color: var(--color-ink);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-large {
+  padding: 1.25rem 2.5rem;
+  font-size: 1.125rem;
+}
+
+/* Section styling */
+section {
+  padding: var(--space-2xl) 0;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: var(--space-3xl) 0;
+  }
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+}
+
+/* Card */
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease forwards;
+}
+
+/* Delay utilities */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* Text utilities */
+.text-center { text-align: center; }
+.text-muted { color: var(--color-ink-muted); }
+.text-primary { color: var(--color-primary); }
+.text-accent { color: var(--color-accent); }
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Focus states */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Visually hidden (for accessibility) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
